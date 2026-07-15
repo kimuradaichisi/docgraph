@@ -196,8 +196,8 @@ uv run ruff format src tests
 
 ## 📄 ライセンス
 
-社内標準（要確認）
+MIT
 
 ## 👤 作成者
 
-木村 大地（SCSK 北海道 産業システム第三部）
+Daichi Kimura
