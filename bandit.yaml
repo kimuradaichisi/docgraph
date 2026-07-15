@@ -1,0 +1,16 @@
+# bandit 設定
+# 参考: https://bandit.readthedocs.io/
+
+# 除外するテスト ID
+skips:
+  - B101  # assert 使用（テストで使うので許容）
+
+# 対象外パス
+exclude_dirs:
+  - tests
+  - .venv
+  - .git
+
+# 深刻度の下限
+# LOW / MEDIUM / HIGH のいずれか
+# LOW を指定すると全ての警告を出力

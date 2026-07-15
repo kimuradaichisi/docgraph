@@ -1,0 +1,46 @@
+# DocGraph Ruff 設定 (段階導入型)
+# スケルトン段階: 実装エラーの検出に集中
+# 実装が進んだ段階で D (pydocstyle) / ANN (型注釈) を段階的に有効化する
+
+line-length = 100
+target-version = "py312"
+
+[lint]
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # pyflakes
+    "I",     # isort
+    "N",     # pep8-naming
+    "UP",    # pyupgrade
+    "B",     # flake8-bugbear
+    "SIM",   # flake8-simplify
+    "PLR",   # pylint refactor
+    "PLW",   # pylint warning
+    "S",     # flake8-bandit (軽量セキュリティ)
+    "C90",   # mccabe 複雑度
+    "RUF",   # Ruff 固有
+    # 将来有効化予定:
+    # "D",   # pydocstyle (実装がある程度進んでから)
+    # "ANN", # 型注釈厳格 (Any 許容箇所を整理してから)
+]
+ignore = [
+    "E501",   # line-length は formatter に委譲
+]
+
+[lint.mccabe]
+max-complexity = 10
+
+[lint.pylint]
+max-args = 6
+max-branches = 12
+max-returns = 6
+max-statements = 30
+
+[lint.per-file-ignores]
+"tests/**/*.py" = ["PLR2004", "S101"]
+"scripts/**/*.py" = []
+
+[format]
+quote-style = "double"
+indent-style = "space"

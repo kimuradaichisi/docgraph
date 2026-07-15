@@ -1,0 +1,27 @@
+[project]
+name = "your-project"
+root = "."
+
+[scan]
+include = ["docs/**/*.md"]
+exclude = [
+    ".git/**",
+    "node_modules/**",
+    "**/archive/**",
+    "**/*_bak.md",
+    "**/*_old.md",
+]
+
+[stopwords]
+files = [
+    ".docgraph/stopwords_default.txt",
+]
+
+[relation]
+name_mention_min_length = 3
+heading_mention_min_length = 3
+name_mention_confidence = 0.7
+heading_mention_confidence = 0.6
+
+[search]
+fts_tokenizer = "unicode61 remove_diacritics 2"

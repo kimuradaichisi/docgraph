@@ -1,0 +1,116 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+.eggs/
+MANIFEST
+
+# ============================================================
+# Testing / Coverage
+# ============================================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+coverage.xml
+*.cover
+
+# ============================================================
+# Type checking
+# ============================================================
+.pyre/
+.pytype/
+.pyright/
+
+# ============================================================
+# uv / venv / pyenv
+# ============================================================
+.venv/
+venv/
+env/
+ENV/
+.python-version
+uv.lock.bak
+
+# ============================================================
+# DocGraph runtime
+# ============================================================
+.docgraph/graph.db
+.docgraph/graph.db-journal
+.docgraph/graph.db-wal
+.docgraph/graph.db-shm
+.docgraph/*.log
+.docgraph/tmp/
+
+# ============================================================
+# IDE / エディタ
+# ============================================================
+.vscode/
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.spyderproject
+.spyproject
+
+# ============================================================
+# OS
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================
+# tmp / logs / secrets
+# ============================================================
+tmp/
+temp/
+*.tmp
+*.log
+*.pid
+*.seed
+*.pid.lock
+.env
+.env.local
+.env.*.local
+secrets/
+*.pem
+*.key
+
+# ============================================================
+# Node (docs / 補助ツール導入時のため予防)
+# ============================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================
+# Pre-commit
+# ============================================================
+.pre-commit-config.local.yaml
